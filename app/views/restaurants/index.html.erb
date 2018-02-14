@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="page-header text-center">
+    <h1>Restaurants Available</h1>
+  </div>
+  <div class="btn-custom">
+    <h5><%= link_to "Create your own", new_restaurant_path %>|</h5>
+  </div>
+  <div class="comment">
+
+  </div>
+  <div class="table-bordered table-striped">
+    <table>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Category</th>
+        <th>Phone Number</th>
+      </tr>
+      <% @restaurants.each do |restaurant| %>
+        <tr>
+          <td><h4><%= restaurant.id %></h4></td>
+          <td><h4><%= link_to restaurant.name, restaurant_path(restaurant) %></h4></td>
+          <td><h4><%= restaurant.address %></h4></td>
+          <td><h4><%= restaurant.category %></h4></td>
+          <td><h4><%= restaurant.phone_number %></h4></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+

@@ -1,0 +1,13 @@
+<h1>Create a new restaurant</h1>
+
+<%= form_for @restaurant do |f| %>
+  <%= f.label :name, "Enter restaurant's name" %>
+  <%= f.text_field :name, placeholder: "Tim Raue" %>
+  <%= f.label :address, "Enter restaurant's address" %>
+  <%= f.text_field :address, placeholder: "Simon-dachstrasse 24"%>
+  <%= f.label :category, "Enter restaurant's category" %>
+  <%= f.text_field :category, placeholder: "italian" %>
+  <%= f.submit "Create" %>
+<% end %>
+
+
